@@ -46,6 +46,15 @@ const projects: Project[] = [
     liveUrl: 'https://zentry-game-site.vercel.app/',
     githubUrl: 'http://github.com/atish-2023/Gaming-website-landing-page',
   },
+  {
+  title: 'Personal Portfolio Website',
+  description: 'A modern and fully responsive personal portfolio website designed to showcase my profile, projects, skills, and education. Built with a clean UI and smooth interactions to create a strong first impression for recruiters and visitors.',
+  image: '/assets/Projects/portfolio.png',
+  tech: ['React', 'Tailwind CSS'],
+  liveUrl: 'https://atish-pawar-portfolio.vercel.app/',
+  githubUrl: 'https://github.com/atish-2023/AtishPawarPortfolio',
+}
+
 
 ];
 
