@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 270 70% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 47% 14%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 47% 14%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 330 80% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 18%;
+    --input: 222 47% 18%;
+    --ring: 270 70% 60%;
+
+    --radius: 1rem;
+
+    /* Custom gradient colors */
+    --gradient-start: 240 60% 50%;
+    --gradient-mid: 270 70% 55%;
+    --gradient-end: 330 80% 60%;
+
+    /* Glass effect */
+    --glass-bg: 222 47% 10%;
+    --glass-border: 222 47% 20%;
+
+    /* Glow colors */
+    --glow-primary: 270 70% 60%;
+    --glow-accent: 330 80% 60%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 222 47% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 47% 18%;
+    --sidebar-ring: 270 70% 60%;
+  }
+
+  /* Theme variations */
+  .theme-blue-purple {
+    --gradient-start: 240 60% 50%;
+    --gradient-mid: 270 70% 55%;
+    --gradient-end: 330 80% 60%;
+    --primary: 270 70% 60%;
+    --accent: 330 80% 60%;
+    --glow-primary: 270 70% 60%;
+    --glow-accent: 330 80% 60%;
+  }
+
+  .theme-purple-pink {
+    --gradient-start: 280 70% 50%;
+    --gradient-mid: 310 80% 55%;
+    --gradient-end: 340 90% 60%;
+    --primary: 310 80% 55%;
+    --accent: 340 90% 60%;
+    --glow-primary: 310 80% 55%;
+    --glow-accent: 340 90% 60%;
+  }
+
+  .theme-teal-blue {
+    --gradient-start: 180 70% 40%;
+    --gradient-mid: 200 80% 50%;
+    --gradient-end: 220 90% 60%;
+    --primary: 200 80% 50%;
+    --accent: 180 70% 45%;
+    --glow-primary: 200 80% 50%;
+    --glow-accent: 180 70% 45%;
+  }
+
+  .theme-orange-pink {
+    --gradient-start: 25 90% 50%;
+    --gradient-mid: 340 80% 55%;
+    --gradient-end: 320 70% 60%;
+    --primary: 25 90% 55%;
+    --accent: 340 80% 55%;
+    --glow-primary: 25 90% 55%;
+    --glow-accent: 340 80% 55%;
+  }
+
+  .theme-green-cyan {
+    --gradient-start: 150 70% 40%;
+    --gradient-mid: 170 80% 45%;
+    --gradient-end: 190 90% 50%;
+    --primary: 170 80% 45%;
+    --accent: 150 70% 45%;
+    --glow-primary: 170 80% 45%;
+    --glow-accent: 150 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body.overflow-hidden {
+    overflow: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient background */
+  .gradient-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)) 0%,
+      hsl(var(--gradient-mid)) 50%,
+      hsl(var(--gradient-end)) 100%
+    );
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)) 0%,
+      hsl(var(--gradient-mid)) 50%,
+      hsl(var(--gradient-end)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass card effect */
+  .glass-card {
+    background: hsl(var(--glass-bg) / 0.6);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--glass-border) / 0.5);
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 30px hsl(var(--glow-primary) / 0.3),
+                0 0 60px hsl(var(--glow-accent) / 0.2);
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 40px hsl(var(--glow-primary) / 0.4),
+                0 0 80px hsl(var(--glow-accent) / 0.3);
+  }
+
+  /* Gradient border */
+  .gradient-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(var(--radius) + 2px);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-mid)),
+      hsl(var(--gradient-end))
+    );
+    z-index: -1;
+  }
+
+  /* Animated gradient border for avatar */
+  .avatar-gradient-border {
+    position: relative;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-mid)),
+      hsl(var(--gradient-end)),
+      hsl(var(--gradient-start))
+    );
+    background-size: 300% 300%;
+    animation: gradient-rotate 4s ease infinite;
+  }
+
+  @keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Theme switcher button */
+  .theme-btn {
+    @apply w-8 h-8 rounded-full cursor-pointer transition-all duration-300;
+    @apply hover:scale-110 hover:ring-2 hover:ring-white/50;
+  }
+
+  .theme-btn.active {
+    @apply ring-2 ring-white scale-110;
+  }
+
+  /* Skill card */
+  .skill-card {
+    @apply glass-card rounded-2xl p-6 transition-all duration-300;
+    @apply hover:scale-105 glow-hover cursor-default;
+  }
+
+  /* Timeline styles */
+  .timeline-dot {
+    @apply w-4 h-4 rounded-full gradient-bg;
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5);
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    @apply gradient-bg text-white;
+    @apply hover:scale-105 hover:shadow-lg;
+    box-shadow: 0 4px 20px hsl(var(--glow-primary) / 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 30px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    @apply glass-card text-foreground;
+    @apply hover:scale-105 glow-hover;
+  }
+
+  /* Input styles */
+  .input-glass {
+    @apply w-full px-4 py-3 rounded-xl transition-all duration-300;
+    @apply glass-card text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .input-glass:focus {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.3);
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold gradient-text mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg max-w-2xl mx-auto;
+  }
+
+  /* Navbar link */
+  .nav-link {
+    @apply relative px-4 py-2 text-muted-foreground transition-all duration-300;
+    @apply hover:text-foreground;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 gradient-bg transition-all duration-300;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Fade in and scale animation */
+  .fade-in-scale {
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Project card */
+  .project-card {
+    @apply glass-card rounded-2xl overflow-hidden transition-all duration-300;
+    @apply hover:scale-[1.02] glow-hover;
+  }
+
+  /* Badge */
+  .tech-badge {
+    @apply px-3 py-1 text-xs font-medium rounded-full;
+    @apply bg-primary/20 text-primary border border-primary/30;
+  }
+
+  /* Social icon */
+  .social-icon {
+    @apply w-12 h-12 rounded-xl glass-card flex items-center justify-center;
+    @apply transition-all duration-300 hover:scale-110 glow-hover;
+    @apply text-muted-foreground hover:text-foreground;
+  }
+
+  /* Stat card */
+  .stat-card {
+    @apply glass-card rounded-2xl p-6 text-center;
+    @apply transition-all duration-300 hover:scale-105 glow-hover;
+  }
+
+  /* Pulse slow animation for hire me button */
+  .animate-pulse-slow {
+    animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Ripple effect for button click */
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--glow-primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px hsl(var(--glow-primary) / 0);
+    }
+  }
+}
