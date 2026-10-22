@@ -53,6 +53,13 @@ const projects: Project[] = [
   tech: ['React', 'Tailwind CSS'],
   liveUrl: 'https://atish-pawar-portfolio.vercel.app/',
   githubUrl: 'https://github.com/atish-2023/AtishPawarPortfolio',
+},
+ {
+  title: 'Deposyt CRM',
+  description: 'A live full-stack CRM for managing records online, with REST APIs, role-based access control, activity logging and automated SMS and email messaging.',
+  image: '/assets/Projects/deposyt.png',
+  tech: ['Node.js', 'PHP', 'MySQL'],
+  liveUrl: 'https://app.deposyt.com',
 }
 
 

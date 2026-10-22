@@ -77,9 +77,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-2">
-          <a href="#home" className="nav-link text-sm sm:text-base">
-            Home
-          </a>
+          
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="nav-link text-sm sm:text-base">
               {link.name}
@@ -120,7 +118,7 @@ const Navbar = () => {
           <div className="p-6 border-b border-border/20 flex-shrink-0">
             <div className="flex items-center space-x-4 mb-4">
               <Avatar className="h-16 w-16">
-                <AvatarImage src="/assets/AtishPawar98.png" alt="Atish Pawar" />
+                <AvatarImage src="/assets/atish23.png" alt="Atish Pawar" />
                 <AvatarFallback className="bg-primary/10 text-primary text-lg">AP</AvatarFallback>
               </Avatar>
             </div>

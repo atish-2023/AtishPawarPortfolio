@@ -2,7 +2,7 @@ import { Code2, Lightbulb, Users } from 'lucide-react';
 
 const stats = [
   { value: '15+', label: 'Projects Completed' },
-  { value: '6+ ', label: 'Months of Experience' },
+  { value: '1+ ', label: 'Year of Experience' },
   { value: '10+', label: 'Happy Clients' },
 ];
 
@@ -45,7 +45,7 @@ const About = () => {
               <div className="flex justify-center mb-3 sm:mb-6">
                 <div className="avatar-gradient-border w-32 h-32 sm:w-40 sm:h-40">
                   <img
-                    src="/assets/AtishPawar98.png"
+                    src="/assets/atish23.png"
                     alt="Atish Pawar"
                     className="w-full h-full object-cover rounded-full"
                   />
@@ -61,7 +61,7 @@ const About = () => {
               </p>
 
               <p className="text-muted-foreground text-center leading-relaxed text-sm sm:text-base">
-                I’m a passionate software developer at Scalar Techhub who loves building things that
+                I’m a passionate software developer at Nadsoft It Solutions who loves building things that
                 people actually enjoy using. I like solving real problems, keeping my work clean and
                 reliable, and learning something new every day. I’m driven by curiosity, growth, and
                 the excitement of turning ideas into real, useful products.

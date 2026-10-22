@@ -3,48 +3,51 @@ interface ExperienceItem {
   company: string;
   duration: string;
   responsibilities: string[];
-  highlights: string[];
+
 }
 
 const experiences: ExperienceItem[] = [
   {
     role: 'Junior Software Developer',
-    company: 'Scalar Techhub Pvt Ltd',
-    duration: 'June 2025 - Present',
+    company: 'Nadsoft IT Solutions',
+    duration: 'Apr 2026 - Jun 2026',
     responsibilities: [
-      'Developed full-stack web applications using the MEAN stack (MongoDB, Express.js, Angular, Node.js)',
-      'Built and customized CMS-based applications for internal and client use',
-      'Designed and integrated RESTful APIs for frontend-backend communication',
-      'Worked on both frontend and backend modules of production applications',
-      'Containerized applications using Docker for consistent development and deployment',
-      'Fixed bugs, improved UI responsiveness, and optimized application performance',
-      'Collaborated with senior developers in an agile development environment',
+      'Developed 4-5 core modules of the Deposyt CRM with Core PHP, MySQL and Node.js.',
+      'Managed 1,000+ records across CRM modules.',
+      'Integrated an AI assistant and third-party APIs to automate around 50 SMS and email messages per day.',
+      'Improved query performance by around 15% with MySQL query and index optimization.',
+      'Built RESTful APIs with role-based access control for 9-10 user roles.',
+      'Resolved around 100 defects with the QA team, shipping 2-3 releases.',
+      'Contributed to the live Deposyt CRM deployment at app.deposyt.com.',
     ],
-    highlights: [
-      'Worked on real-world client and internal projects',
-      'Gained hands-on experience in full-stack development',
-      'Learned REST API design, CMS development, and Docker basics',
-      'Contributed to end-to-end application development',
-    ],
+  },
+  {
+    role: 'Software Developer',
+    company: 'Scalar Techhub Pvt Ltd',
+    duration: 'June 2025 - Mar 2026',
+    responsibilities: [
+      'Built full-stack apps with the MEAN stack and MERN Stack.',
+      'Developed 10+ reusable UI components with Angular, React.js and TypeScript.',
+      'Integrated 50+ REST API endpoints with 18-20 MongoDB collections.',
+      'Cut page load times by around 25% with aggregation tuning and pagination.',
+      'Customized CMS-based apps for internal and client use.',
+      'Synced data in real time for 130+ concurrent users with Firebase.',
+      'Containerized apps with Docker for consistent deployment.',
+      'Fixed 180+ defects in an Agile team, shipping stable releases.',
+    ]
   },
   {
     role: 'Web Development Intern',
     company: 'Winners IT Solution',
     duration: 'Sep 2023 - Apr 2024',
     responsibilities: [
-      'Developed web applications using PHP and Laravel framework',
-      'Built dynamic UI features using HTML, CSS, JavaScript, and AJAX',
-      'Designed and managed databases using MySQL and PostgreSQL',
-      'Integrated frontend forms with backend logic and database operations',
-      'Tested applications, fixed bugs, and improved UI consistency',
-      'Learned version control using Git and basic team collaboration',
-    ],
-    highlights: [
-      'Built CRUD-based web applications using Laravel',
-      'Worked with relational databases (MySQL, PostgreSQL)',
-      'Improved full-stack development fundamentals',
-      'Gained real-world internship experience',
-    ],
+      'Developed web applications with PHP and the Laravel framework.',
+      'Built dynamic UI features with HTML, CSS, JavaScript and AJAX.',
+      'Designed and managed MySQL and PostgreSQL databases.',
+      'Connected frontend forms to backend logic and database operations.',
+      'Tested applications, fixed bugs and improved UI consistency.',
+      'Used Git for version control and team collaboration.',
+    ]
   },
 ];
 const Experience = () => {
@@ -67,9 +70,8 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative flex flex-col gap-4 mb-6 fade-in md:flex-row md:gap-8 md:mb-12 ${
-                index % 2 === 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              className={`relative flex flex-col gap-4 mb-6 fade-in md:flex-row md:gap-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                }`}
               style={{ animationDelay: `${0.2 * index}s` }}
             >
               {/* Timeline dot - Hidden on mobile */}
@@ -83,7 +85,7 @@ const Experience = () => {
                       {exp.duration}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-lg sm:text-xl font-bold font-display mb-1">{exp.role}</h3>
                   <p className="text-primary mb-3 sm:mb-4 text-sm sm:text-base">{exp.company}</p>
 
@@ -96,17 +98,7 @@ const Experience = () => {
                     ))}
                   </ul>
 
-                  <div className="border-t border-border pt-4">
-                    <p className="text-xs text-primary uppercase tracking-wide mb-2 font-semibold">
-                      Key Achievements
-                    </p>
-                    {exp.highlights.map((highlight, i) => (
-                      <p key={i} className="text-sm text-foreground flex items-start gap-2 mb-1">
-                        <span className="text-accent">★</span>
-                        {highlight}
-                      </p>
-                    ))}
-                  </div>
+
                 </div>
               </div>
 

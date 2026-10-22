@@ -15,47 +15,14 @@ const certifications: CertificationItem[] = [
     title: 'Fundamentals of Cloud Computing',
     platform: 'IBM',
     year: '2026',
-    description: 'Completed a foundational course on cloud computing concepts including cloud infrastructure, virtualization, containers, and cloud service models such as IaaS, PaaS, and SaaS. Gained understanding of public, private, and hybrid cloud environments.',
+    description: 'Completed  an IBM course on cloud computing basics, including virtualization, containers, and Iaas, Paas and Saas a services',
     skills: [
-      'Cloud Computing',
-      'Cloud Infrastructure',
-      'Cloud Migration',
-      'Cloud Security',
-      'Computing Services',
-      'Containers',
-      'Docker',
-      'Hybrid Cloud',
-      'Infrastructure as a Service (IaaS)',
-      'Platform as a Service (PaaS)',
-      'Private Cloud',
-      'Public Cloud',
-      'Software as a Service (SaaS)',
-      'Virtualization',
-      'Visual Studio Code'
+      'Cloud Computing', 'IaaS', 'PaaS', 'SaaS', 'Virtualization', 'Containers', 'Public Cloud', 'Private Cloud', 'Hybrid Cloud'
     ],
     icon: Trophy,
     link: 'https://www.credly.com/badges/eda22557-cdb0-4849-98f1-f130a0fad5bb'
   }
-  ,
-  {
-    title: 'Fundamentals of Java Programming',
-    platform: 'Udemy',
-    year: '2025',
-    description: 'Completed a comprehensive Java course covering core Java concepts such as data types, control statements, OOP principles, classes and objects, inheritance, polymorphism, exception handling, and basic collections.',
-    skills: [
-      
-      'Core Java',
-      'Object-Oriented Programming (OOP)',
-      'Servlet',
-      'Jsp',
-      'Exception Handling',
-      'Collections Framework',
-      'Spring Boot',
-      'Hibernate'
-    ],
-    icon: Award,
-    link: 'https://www.udemy.com/certificate/UC-758e01af-7b9b-4316-88ad-1d16b30e48a1/'
-  }
+  
  
 ];
 

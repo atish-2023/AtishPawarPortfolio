@@ -93,7 +93,7 @@ const Hero = () => {
           {/* Premium Resume Button */}
           <div className="relative group overflow-visible">
             <a
-              href="/assets/AtishPawar_Resume_20_Jan_2026.pdf"
+              href="/assets/Atish_Pawar_Full_Stack_Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden

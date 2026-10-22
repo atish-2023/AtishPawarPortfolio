@@ -4,7 +4,6 @@ interface EducationItem {
   degree: string;
   institution: string;
   duration: string;
-  description: string;
   gpa?: string;
 }
 
@@ -13,28 +12,24 @@ const educationData: EducationItem[] = [
     degree: 'Master of Computer Science (MCS)',
     institution: 'Annasaheb Magar College ,Pune 28 (SPPU)',
     duration: '2024 - 2026',
-    description: 'Pursuing Master’s degree with a focus on advanced software engineering, web development, databases, and modern application development. Actively working on projects using Angular, Firebase, Node.js, and Java.',
-    gpa: '—'
+    gpa: '8.17'
   },
   {
     degree: 'Bachelor of Computer Science (BCS)',
     institution: 'Annasaheb Magar College, Pune 28 (SPPU)',
     duration: '2021 - 2024',
-    description: 'Completed BCS with a strong focus on programming, data structures, web development, and software engineering. Built academic and personal projects using C, C++, Java, HTML, CSS, JavaScript, and Angular.',
     gpa: '7.91'
   },
   {
     degree: 'Higher Secondary Certificate (HSC)',
     institution: 'Maharashtra State Board',
     duration: '2021',
-    description: 'Science stream with Computer Science. Studied core subjects like Mathematics, Physics, and Computer Science.',
     gpa: '75.60%'
   },
   {
     degree: 'Secondary School Certificate (SSC)',
     institution: 'Maharashtra State Board',
     duration: '2019',
-    description: 'Completed secondary education with good academic performance. Actively participated in school-level activities.',
     gpa: '82.60%'
   }
 ];
@@ -87,9 +82,6 @@ const Education = () => {
                   <h3 className="text-xl font-bold font-display mb-1">{edu.degree}</h3>
                   <p className="text-primary mb-4">{edu.institution}</p>
 
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {edu.description}
-                  </p>
                 </div>
               </div>
 
