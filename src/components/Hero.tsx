@@ -3,7 +3,7 @@ import { ChevronDown, Download } from 'lucide-react';
 
 const roles = [
   'Full Stack Developer',
-  'Software Developer at Scalar Techhub',
+  'Software Developer at Nadsoft It Solutions',
   'Web Developer',
 ];
 
